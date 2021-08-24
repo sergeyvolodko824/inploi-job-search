@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-//Styled Components
 const ResultContainer = styled.div`
   width: 70vw;
   display: flex;
@@ -55,7 +54,6 @@ const ApplyButton = styled.span`
   }
 `;
 
-//Interfaces
 interface Data {
   hit: {
     data_company: {

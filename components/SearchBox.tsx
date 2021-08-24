@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { connectSearchBox } from "react-instantsearch-dom";
 import styled from "styled-components";
 
-//styled components
 const Input = styled.input`
   outline: none;
   width: 80%;
@@ -44,7 +43,6 @@ const FormContainer = styled.div`
   border-radius: 20px;
 `;
 
-// Components
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
   const [text, setText] = useState("");
   const handleChange = (e) => {

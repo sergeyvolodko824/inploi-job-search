@@ -9,13 +9,11 @@ import {
 import { CustomSearchBox } from "../components/SearchBox";
 import Product from "../components/Product";
 
-//Api keys
 const searchClient = algoliasearch(
   "RY8KA2GJPX",
   "13e751a21f2ae69d7ccb7b590a0a9b3a",
 );
 
-// Style components
 const Container = styled.div`
   ul,
   ol,
@@ -47,7 +45,6 @@ const Headline = styled.h1`
   color: white;
 `;
 
-// Components
 const Results = connectStateResults(({ searchState }) =>
   searchState && searchState.query ? <Hits hitComponent={Product} /> : null,
 );

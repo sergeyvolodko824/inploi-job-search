@@ -47,6 +47,7 @@ const ApplyButton = styled.span`
   color:white;
   padding:15px;
   border-radius:20px;
+  transition: all .8s;
   &:hover{
     background-color: #000000;
     color:white;

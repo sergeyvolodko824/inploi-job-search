@@ -6,7 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  #Search::-webkit-search-cancel-button:hover{
+  ::-webkit-search-cancel-button{
     cursor:pointer;   
   }
   * {

@@ -3,9 +3,6 @@ import styled from "styled-components";
 
 //Styled Components
 const ResultContainer = styled.div`
-  &:hover{
-    transform:scale(1.1);
-  }
   width: 70vw;
   display:flex;
   /* border:1px solid black; */
@@ -83,7 +80,7 @@ interface Data {
 }
 
 const Product = (props : Data ) => {
-  // console.log(hit);
+  // console.log(props.hit);
   return (
     <ResultContainer>
       <Divs>

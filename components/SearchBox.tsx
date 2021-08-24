@@ -5,12 +5,12 @@ import styled from 'styled-components';
 //styled components
 const Input = styled.input`
   outline:none;
-  width:80%;
+  width:75%;
   font-size:1.6rem;
   border:none;
   font-weight:700;
   padding:20px;
-  color:grey;
+  color:grey;  
 `;
 
 const Button = styled.span`
@@ -33,7 +33,7 @@ const Button = styled.span`
   }
 `;
 
-const FormContainer = styled.form`
+const FormContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,25 +45,57 @@ const FormContainer = styled.form`
   border-radius: 20px;
 `;
 
-
 // Components
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
   const [text, setText] = useState('');
+  // const [searchAsYouType, setSearchAsYouType] = useState(false);
+
+  const EraseButton = styled.span`
+    font-size: 2rem;
+    color:lightpink;
+    &:hover{
+      cursor:pointer;
+      color: #6464f5;
+    }
+    display:${text.length >0 ? 'block':'none' };
+  `;
   const handleChange = (e) => {
     setText(e.target.value); //update for text for searching
+    if(e.target.value.length <= 1)
+    {
+      refine('');
+    }
+    else if(e.target.value.length > 1)
+    {
+      refine(text);
+    }
   }
   const handleSubmit = () => {
     console.log(text);
     refine(text); //search text
     
   }
+  const handleErase = () => {
+    setText('');
+    refine('');
+  }
+  const handleKeyDown = (e) => {
+    if(e.key=='Enter')
+    {
+      refine(text);
+    }
+  }
   return (
-    <FormContainer noValidate action="" role="search">
+    <FormContainer>
       <Input
-        type="search"
+        type="text"
         onChange={handleChange}
+        value={text}
         placeholder="Search for anything..."
-      />
+        onKeyDown={handleKeyDown}
+      >
+      </Input>
+      <EraseButton onClick={handleErase}>X</EraseButton>
       <Button onClick={handleSubmit}>Search</Button>
     </FormContainer>
   );

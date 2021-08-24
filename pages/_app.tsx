@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  #Search::-webkit-search-cancel-button:hover{
+    cursor:pointer;   
+  }
   * {
     font-family: 'Open Sans', sans-serif;
   }

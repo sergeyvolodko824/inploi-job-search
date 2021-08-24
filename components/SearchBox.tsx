@@ -14,7 +14,7 @@ const Input = styled.input`
 `;
 
 const Button = styled.span`
-  background-color: blue;
+  background-color: #0045FF;
   color:white;
   font-size: 1.5rem;
   padding: 25px 10px;

@@ -4,12 +4,11 @@ import styled from "styled-components";
 const ResultContainer = styled.div`
   width: 70vw;
   display: flex;
-  /* border:1px solid black; */
   border-radius: 20px;
   align-items: center;
   padding: 5px;
   margin: 20px;
-  box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
 `;
 
 const Logo = styled.img`

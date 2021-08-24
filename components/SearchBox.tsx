@@ -46,7 +46,7 @@ const FormContainer = styled.div`
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
   const [text, setText] = useState("");
   const handleChange = (e) => {
-    setText(e.target.value); //update for text for searching
+    setText(e.target.value);
     if (e.target.value.length <= 1) {
       refine("");
     } else if (e.target.value.length > 1) {
@@ -54,7 +54,7 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
     }
   };
   const handleSubmit = () => {
-    refine(text); //search text
+    refine(text);
   };
   const handleErase = () => {
     setText("");
@@ -74,7 +74,6 @@ const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
         placeholder="Search for anything..."
         onKeyDown={handleKeyDown}
       ></Input>
-      {/* <EraseButton onClick={handleErase}>{ text.length > 0 ? 'X' : ''}</EraseButton> */}
       <Button onClick={handleSubmit}>Search</Button>
     </FormContainer>
   );

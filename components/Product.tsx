@@ -81,7 +81,6 @@ interface Data {
 }
 
 const Product = (props : Data ) => {
-  // console.log(props.hit);
   return (
     <ResultContainer>
       <Divs>

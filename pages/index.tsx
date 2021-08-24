@@ -41,15 +41,12 @@ const Headline = styled.h1`
   color:white;
 `;
 
-
-
-
-//Components
+// Components
 const Results = connectStateResults(
   ({ searchState }) =>
     searchState && searchState.query ? (
       <Hits hitComponent={Product} />
-    ) : //<div>No query</div>
+    ) :
     null
 );
 
@@ -57,7 +54,6 @@ const Home = () => {
 
   return (
     <Container>
-        
         <InstantSearch
         indexName="dev_jobs_index"
         searchClient={searchClient}

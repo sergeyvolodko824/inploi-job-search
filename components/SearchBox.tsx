@@ -47,16 +47,6 @@ const FormContainer = styled.div`
 // Components
 const SearchBox = ({ currentRefinement, isSearchStalled, refine }) => {
   const [text, setText] = useState('');
-  // const [searchAsYouType, setSearchAsYouType] = useState(false);
-
-  // const EraseButton = styled.span`
-  //   font-size: 2rem;
-  //   color:lightpink;
-  //   &:hover{
-  //     cursor:pointer;
-  //     color: #6464f5;
-  //   }
-  // `;
   const handleChange = (e) => {
     setText(e.target.value); //update for text for searching
     if(e.target.value.length <= 1)
